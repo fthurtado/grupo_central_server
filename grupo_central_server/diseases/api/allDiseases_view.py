@@ -19,7 +19,7 @@ class GetDiseases(viewsets.ModelViewSet):
             if name != "Jurisdiction of Occurrence" \
             and name != "Year" \
             and name != "Month":
-                diseases[name] = {}
+                diseases[name] = {"favorite": False}
 
         for row_index in df.index:
             for name in diseases:
